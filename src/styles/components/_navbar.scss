@@ -1,0 +1,22 @@
+nav {
+    background: #ccc;
+
+    ul {
+        padding: 14px;
+
+        li {
+            list-style: none;
+
+            a {
+                display: block;
+                padding: 16px;
+                color: #9b9b9b;
+
+                &:hover {
+                    background-color: #9b9b9b;
+                    transition: color .4s, background-color .4s;
+                }
+            }
+        }
+    }
+}
