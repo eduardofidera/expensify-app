@@ -10,20 +10,20 @@ import Navbar from '../components/Navbar'
 
 const AppRouter = () => (
     <BrowserRouter>
-        <div class="col-12">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row">
+        <div className="col-12">
+            <div className="row">
+                <div className="col-12">
+                    <div className="row">
                         <Header />
                     </div>
                 </div>
-                <div class="col-12 col-md-1">
-                    <div class="row">
+                <div className="col-12 col-md-1">
+                    <div className="row">
                         <Navbar />
                     </div>
                 </div>
-                <div class="col-12 col-md-11">
-                    <div class="row">
+                <div className="col-12 col-md-11">
+                    <div className="row">
                         <Switch>
                             <Route path="/" component={ExpenseDashboardPage} exact={true}/>
                             <Route path="/create" component={AddExpensePage}/>

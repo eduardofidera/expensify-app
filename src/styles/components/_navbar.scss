@@ -1,22 +1,39 @@
 nav {
-    background: #ccc;
+    background: #83d3c9;
+    border-right: 1px solid #bbb;
 
     ul {
-        padding: 14px;
+        padding: 18px;
 
         li {
             list-style: none;
 
             a {
                 display: block;
-                padding: 16px;
-                color: #9b9b9b;
+                padding: 14px 16px;
+                border: 1px solid #83d3c9;
+                color: #fff;
+                opacity: 1;
+                transition: opacity 4s linear, color .4s linear, background-color .4s linear, border-color .4s linear;
 
                 &:hover {
-                    background-color: #9b9b9b;
-                    transition: color .4s, background-color .4s;
+                    opacity: .8;
+                    color: #83d3c9;
+                    background: #F4F3F0;
                 }
             }
+        }
+    }
+    
+    
+    .is-active {
+        font-weight: bold;
+        background: #fff;
+        color: #83d3c9;
+
+        &:hover {
+            color: #83d3c9;
+            background: #F4F3F0;
         }
     }
 }

@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => (
-    <header class="header">
+    <div className="header">
         <NavLink to="/"><h1>Expensify</h1></NavLink>
-    </header>
+    </div>
 );
 
 export default Header;
