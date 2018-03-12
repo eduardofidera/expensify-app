@@ -8,22 +8,16 @@ import ErrorPage from '../components/ErrorPage';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar'
 
+
+// @TODO add login component
 const AppRouter = () => (
     <BrowserRouter>
     <div className="main col-12">
         <div className="row">
-            <div className="col-12">
-                <div className="row">
-                    <Header />
-                </div>
-            </div>
-            <div className="col-12 col-md-2">
-                <div className="row">
-                    <Navbar />
-                </div>
-            </div>
-            <div className="col-12 col-md-10">
-                <div className="row">
+            <Navbar />
+            <Header />
+            <main>
+                <div class="container">
                     <Switch>
                         <Route path="/" component={ExpenseDashboardPage} exact={true}/>
                         <Route path="/create" component={AddExpensePage}/>
@@ -32,8 +26,7 @@ const AppRouter = () => (
                         <Route component={ErrorPage} />
                     </Switch>
                 </div>
-            </div>
-        
+            </main>
         </div>
     </div>
     </BrowserRouter>

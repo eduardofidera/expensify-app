@@ -3,12 +3,14 @@ import { NavLink } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faCircleNotch } from '@fortawesome/fontawesome-free-solid';
 
+
+// @TODO add components to fill header links
 const Header = () => (
     <div className="header">
         <div className="header__brand">
             <ul>
                 <li>
-                    <NavLink to="/"><span className="header__logo"><FontAwesomeIcon icon={faCircleNotch} /></span><h1 className="header__title">Expensify</h1></NavLink>
+                    <NavLink to="/" className="navbar__home"><FontAwesomeIcon icon={faCircleNotch} /><span>Login</span></NavLink>
                 </li>
             </ul>
         </div>

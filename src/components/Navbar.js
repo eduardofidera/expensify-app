@@ -1,11 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faAlignJustify, faPencilAlt, faQuestionCircle, faExclamationCircle } from '@fortawesome/fontawesome-free-solid';
+import { faCircleNotch, faAlignJustify, faPencilAlt, faQuestionCircle, faExclamationCircle } from '@fortawesome/fontawesome-free-solid';
 
 const Navbar = () => (
     <nav>
         <ul>
+            <li>
+                <NavLink to="/" className="navbar__home"><FontAwesomeIcon icon={faCircleNotch} /><span>Expensify</span></NavLink>
+            </li>
             <li>
                 <NavLink to="/" activeClassName="is-active" exact={true}><FontAwesomeIcon icon={faAlignJustify} /><span>list expenses</span></NavLink>
             </li>
