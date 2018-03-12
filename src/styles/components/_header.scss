@@ -1,5 +1,40 @@
 .header {
+    display: flex;
     width: 100%;
-    height: 80px;
+    height: 90px;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
     background: #83d3c9;
+
+    ul {
+        padding: 0;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+
+            a {
+                color: #ffffff;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.header__brand {
+    padding: $m-size $l-size;
+    font-size: $l-size;
+}
+
+.header__logo {
+    padding-right: $s-size;
+    border-right: 1px solid #fff;
+}
+
+.header__title {
+    display: inline-block;
+    margin-left: $s-size;
 }

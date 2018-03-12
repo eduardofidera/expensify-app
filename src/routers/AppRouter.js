@@ -10,31 +10,32 @@ import Navbar from '../components/Navbar'
 
 const AppRouter = () => (
     <BrowserRouter>
-        <div className="col-12">
-            <div className="row">
-                <div className="col-12">
-                    <div className="row">
-                        <Header />
-                    </div>
-                </div>
-                <div className="col-12 col-md-1">
-                    <div className="row">
-                        <Navbar />
-                    </div>
-                </div>
-                <div className="col-12 col-md-11">
-                    <div className="row">
-                        <Switch>
-                            <Route path="/" component={ExpenseDashboardPage} exact={true}/>
-                            <Route path="/create" component={AddExpensePage}/>
-                            <Route path="/edit/:id" component={EditExpensePage}/>
-                            <Route path="/help" component={HelpPage}/>
-                            <Route component={ErrorPage} />
-                        </Switch>
-                    </div>
+    <div className="main col-12">
+        <div className="row">
+            <div className="col-12">
+                <div className="row">
+                    <Header />
                 </div>
             </div>
+            <div className="col-12 col-md-2">
+                <div className="row">
+                    <Navbar />
+                </div>
+            </div>
+            <div className="col-12 col-md-10">
+                <div className="row">
+                    <Switch>
+                        <Route path="/" component={ExpenseDashboardPage} exact={true}/>
+                        <Route path="/create" component={AddExpensePage}/>
+                        <Route path="/edit/:id" component={EditExpensePage}/>
+                        <Route path="/help" component={HelpPage}/>
+                        <Route component={ErrorPage} />
+                    </Switch>
+                </div>
+            </div>
+        
         </div>
+    </div>
     </BrowserRouter>
 );
 

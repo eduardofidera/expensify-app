@@ -1,22 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faHome, faPencilAlt, faQuestionCircle, faExclamationCircle } from '@fortawesome/fontawesome-free-solid'
+import { faAlignJustify, faPencilAlt, faQuestionCircle, faExclamationCircle } from '@fortawesome/fontawesome-free-solid';
 
 const Navbar = () => (
     <nav>
         <ul>
             <li>
-                <NavLink to="/" activeClassName="is-active" exact={true}><FontAwesomeIcon icon={faHome} /></NavLink>
+                <NavLink to="/" activeClassName="is-active" exact={true}><FontAwesomeIcon icon={faAlignJustify} /><span>list expenses</span></NavLink>
             </li>
             <li>
-                <NavLink to="/create" activeClassName="is-active"><FontAwesomeIcon icon={faPencilAlt} /></NavLink>
+                <NavLink to="/create" activeClassName="is-active"><FontAwesomeIcon icon={faPencilAlt} /><span>add expense</span></NavLink>
             </li>
             <li>
-                <NavLink to="/help" activeClassName="is-active"><FontAwesomeIcon icon={faQuestionCircle} /></NavLink>
+                <NavLink to="/help" activeClassName="is-active"><FontAwesomeIcon icon={faQuestionCircle} /><span>help</span></NavLink>
             </li>
             <li>
-                <NavLink to="/dasd" activeClassName="is-active"><FontAwesomeIcon icon={faExclamationCircle} /></NavLink>
+                <NavLink to="/dasd" activeClassName="is-active"><FontAwesomeIcon icon={faExclamationCircle} /><span>report</span></NavLink>
             </li>
         </ul>
     </nav>

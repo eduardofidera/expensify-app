@@ -1,6 +1,6 @@
 nav {
     background: #83d3c9;
-    border-right: 1px solid #bbb;
+    border-right: 1px solid #fff;
 
     ul {
         padding: 18px;
@@ -14,12 +14,17 @@ nav {
                 border: 1px solid #83d3c9;
                 color: #fff;
                 opacity: 1;
-                transition: opacity 4s linear, color .4s linear, background-color .4s linear, border-color .4s linear;
+                transition: opacity .4s linear, color .4s linear, background-color .4s linear, border-color .4s linear;
 
                 &:hover {
                     opacity: .8;
                     color: #83d3c9;
                     background: #F4F3F0;
+                    text-decoration: none;
+                }
+
+                span {
+                    padding-left: $s-size;
                 }
             }
         }
@@ -27,8 +32,7 @@ nav {
     
     
     .is-active {
-        font-weight: bold;
-        background: #fff;
+        background: #F4F3F0;
         color: #83d3c9;
 
         &:hover {
