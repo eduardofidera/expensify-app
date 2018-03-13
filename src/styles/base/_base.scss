@@ -5,7 +5,7 @@ html {
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
-    background: #F4F3F0;
+    background: color('main', 'secondary');
 }
 
 button {
@@ -14,4 +14,12 @@ button {
 
 button:disabled {
     cursor: default;
+}
+
+ul {
+    li {
+        display: inline-block;
+        position: relative;
+        list-style: none;
+    }
 }

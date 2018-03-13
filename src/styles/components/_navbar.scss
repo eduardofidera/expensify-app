@@ -3,9 +3,9 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 88px;
-    background: $main-color;
-    border-right: 1px solid $secondary-color;
+    width: 82px;
+    background: color('main', 'base');
+    box-shadow: inset -2px 0 0 #e5e5e5;
     transition: width .2s ease-in-out;
     
     &:hover {
@@ -39,14 +39,10 @@ nav {
         margin: 0;
 
         li {
-            position: relative;
-            list-style: none;
-
             a {
                 display: block;
                 padding: 14px 16px;
-                border: 1px solid $main-color;
-                color: $white-color;
+                color: color('shades', 'white');
                 font-weight: bold;
                 transition: color .2s linear, background-color .2s linear, border-color .2s linear;
             }
@@ -56,9 +52,7 @@ nav {
     .navbar__main {
         a {
             &:hover {
-                color: $main-color;
-                background: $white-color;
-                opacity: .9;
+                background: darken(color('main', 'base'), 10);
             }
         }
 
@@ -72,12 +66,12 @@ nav {
         }
 
         .is-active {
-            background: $white-color;
-            color: $main-color;
+            background: color('main', 'secondary');
+            color: darken(color('main', 'base'), 10);
     
             &:hover {
-                color: $main-color;
-                background: $white-color;
+                color: darken(color('main', 'base'), 10);
+                background: color('main', 'secondary');
             }
         }
     }
@@ -103,7 +97,7 @@ nav {
             padding: 18px;
 
             &:hover {
-                color: $white-color;
+                color: color('shades', 'white');
             }
         }
 
