@@ -3,7 +3,7 @@ main {
 
     h1 {
         padding: 8px 0;
-        border-bottom: 2px solid #e5e5e5;
+        border-bottom: 2px solid color('main', 'grey');
     }
 
     input {
@@ -12,10 +12,6 @@ main {
         height: $l-size;
 
         // @TODO find a svg (or fontAwesome) align-justify to put into pseudo element
-        // &:before {
-            // content: '\f16c';
-            // font-family: FontAwesome;
-        // }
 
         &:focus {
             outline: none;
