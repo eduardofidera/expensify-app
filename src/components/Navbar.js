@@ -5,10 +5,12 @@ import { faCircleNotch, faAlignJustify, faPencilAlt, faQuestionCircle, faExclama
 
 const Navbar = () => (
     <nav>
-        <ul>
+        <ul className="navbar__brand">
             <li>
-                <NavLink to="/" className="navbar__home"><FontAwesomeIcon icon={faCircleNotch} /><span>Expensify</span></NavLink>
+                <NavLink to="/"><FontAwesomeIcon icon={faCircleNotch} /><h1>Expensify</h1></NavLink>
             </li>
+        </ul>
+        <ul className="navbar__main">
             <li>
                 <NavLink to="/" activeClassName="is-active" exact={true}><FontAwesomeIcon icon={faAlignJustify} /><span>list expenses</span></NavLink>
             </li>

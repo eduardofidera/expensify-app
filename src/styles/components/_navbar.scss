@@ -3,29 +3,34 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: auto;
+    width: 88px;
     background: #83d3c9;
     border-right: 1px solid #F4F3F0;
+    transition: width .2s ease-in-out;
     
     &:hover {
-        width: 220px;
-
+        width: 240px;
+        transition-delay: .4s;
 
         span {
-            display: inline;
+            visibility: visible;
+            transition-delay: .5s;
         }
 
-        .navbar__home {
-            font-size: 2.4rem;
+        .navbar__brand {
+            h1 {
+                visibility: visible;
+                transition-delay: .5s;
+            }
         }
     }
 
     ul {
-        padding: 18px;
+        padding: 0 18px;
+        margin: 0;
 
         li {
             position: relative;
-            overflow-x: hidden;
             list-style: none;
 
             a {
@@ -33,38 +38,61 @@ nav {
                 padding: 14px 16px;
                 border: 1px solid #83d3c9;
                 color: #fff;
-                opacity: 1;
-                transition: opacity .4s linear, color .4s linear, background-color .4s linear, border-color .4s linear;
-
-                &:hover {
-                    opacity: .8;
-                    color: #83d3c9;
-                    background: #F4F3F0;
-                    text-decoration: none;
-                }
+                font-weight: bold;
+                transition: color .2s linear, background-color .2s linear, border-color .2s linear;
 
                 span {
-                    display: none;
+                    position: absolute;
+                    visibility: hidden;
+                    width: 160px;
+                    left: $l-size;
                     padding-left: $s-size;
+                    transition: visibility 0s;
                 }
             }
         }
     }
-    
-    
-    .is-active {
-        background: #F4F3F0;
-        color: #83d3c9;
 
-        &:hover {
-            color: #83d3c9;
+    .navbar__main {
+        a {
+            &:hover {
+                color: #83d3c9;
+                background: #F4F3F0;
+            }
+        }
+
+        .is-active {
             background: #F4F3F0;
+            color: #83d3c9;
+    
+            &:hover {
+                color: #83d3c9;
+                background: #F4F3F0;
+            }
         }
     }
-}
 
-.navbar__home {
-    span {
-        padding-left: $s-size;
+    .navbar__brand {
+        font-size: $l-size;
+        padding: 0 8px;
+        
+        h1 {
+            display: inline;
+            position: absolute;
+            visibility: hidden;
+            left: 5.8rem;
+            top: 2.8rem;
+            border-left: 1px solid #fff;
+            padding-left: $s-size;
+            transition: visibility 0s;
+        }
+        
+        a {
+            padding: 18px;
+
+            &:hover {
+                color: #fff;
+            }
+        }
     }
 }
