@@ -12,12 +12,11 @@ import Navbar from '../components/Navbar'
 // @TODO add login component
 const AppRouter = () => (
     <BrowserRouter>
-    <div className="main col-12">
-        <div className="row">
+    <div className="main">
             <Navbar />
             <Header />
             <main>
-                <div class="container">
+                <div className="container">
                     <Switch>
                         <Route path="/" component={ExpenseDashboardPage} exact={true}/>
                         <Route path="/create" component={AddExpensePage}/>
@@ -27,7 +26,6 @@ const AppRouter = () => (
                     </Switch>
                 </div>
             </main>
-        </div>
     </div>
     </BrowserRouter>
 );

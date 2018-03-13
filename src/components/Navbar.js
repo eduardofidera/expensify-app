@@ -7,7 +7,7 @@ const Navbar = () => (
     <nav>
         <ul className="navbar__brand">
             <li>
-                <NavLink to="/"><FontAwesomeIcon icon={faCircleNotch} /><h1>Expensify</h1></NavLink>
+                <NavLink to="/"><span><FontAwesomeIcon icon={faCircleNotch} /></span><h1>Expensify</h1></NavLink>
             </li>
         </ul>
         <ul className="navbar__main">

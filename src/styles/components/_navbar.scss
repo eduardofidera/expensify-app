@@ -4,23 +4,32 @@ nav {
     left: 0;
     height: 100%;
     width: 88px;
-    background: #83d3c9;
-    border-right: 1px solid #F4F3F0;
+    background: $main-color;
+    border-right: 1px solid $secondary-color;
     transition: width .2s ease-in-out;
     
     &:hover {
         width: 240px;
         transition-delay: .4s;
 
-        span {
-            visibility: visible;
-            transition-delay: .5s;
+        .navbar__main {
+            span {
+                visibility: visible;
+                transition-delay: .5s;
+            }
         }
 
         .navbar__brand {
             h1 {
                 visibility: visible;
                 transition-delay: .5s;
+            }
+
+            span {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
             }
         }
     }
@@ -36,19 +45,10 @@ nav {
             a {
                 display: block;
                 padding: 14px 16px;
-                border: 1px solid #83d3c9;
-                color: #fff;
+                border: 1px solid $main-color;
+                color: $white-color;
                 font-weight: bold;
                 transition: color .2s linear, background-color .2s linear, border-color .2s linear;
-
-                span {
-                    position: absolute;
-                    visibility: hidden;
-                    width: 160px;
-                    left: $l-size;
-                    padding-left: $s-size;
-                    transition: visibility 0s;
-                }
             }
         }
     }
@@ -56,18 +56,28 @@ nav {
     .navbar__main {
         a {
             &:hover {
-                color: #83d3c9;
-                background: #F4F3F0;
+                color: $main-color;
+                background: $white-color;
+                opacity: .9;
             }
         }
 
+        span {
+            position: absolute;
+            visibility: hidden;
+            width: 160px;
+            left: $l-size;
+            padding-left: $s-size;
+            transition: visibility 0s;
+        }
+
         .is-active {
-            background: #F4F3F0;
-            color: #83d3c9;
+            background: $white-color;
+            color: $main-color;
     
             &:hover {
-                color: #83d3c9;
-                background: #F4F3F0;
+                color: $main-color;
+                background: $white-color;
             }
         }
     }
@@ -81,8 +91,10 @@ nav {
             position: absolute;
             visibility: hidden;
             left: 5.8rem;
-            top: 2.8rem;
-            border-left: 1px solid #fff;
+            top: 2rem;
+            margin: 0;
+            font-size: 2.8rem;
+            border-left: 1px solid;
             padding-left: $s-size;
             transition: visibility 0s;
         }
@@ -91,8 +103,12 @@ nav {
             padding: 18px;
 
             &:hover {
-                color: #fff;
+                color: $white-color;
             }
+        }
+
+        span {
+            display: inline-block;
         }
     }
 }
