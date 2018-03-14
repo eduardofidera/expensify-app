@@ -3,26 +3,26 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 82px;
+    width: 57px;
     background: color('main', 'base');
     box-shadow: inset -2px 0 0 #e5e5e5;
     transition: width .2s ease-in-out;
     
     &:hover {
         width: 240px;
-        transition-delay: .4s;
+        transition-delay: .2s;
 
         .navbar__main {
             span {
                 visibility: visible;
-                transition-delay: .5s;
+                transition-delay: .3s;
             }
         }
 
         .navbar__brand {
             h1 {
                 visibility: visible;
-                transition-delay: .5s;
+                transition-delay: .3s;
             }
 
             span {
@@ -35,13 +35,13 @@ nav {
     }
 
     ul {
-        padding: 0 18px;
+        padding: 0 6px;
         margin: 0;
 
         li {
             a {
                 display: block;
-                padding: 14px 16px;
+                padding: 14px 15px;
                 color: color('shades', 'white');
                 font-weight: bold;
                 transition: color .2s linear, background-color .2s linear, border-color .2s linear;
@@ -78,14 +78,14 @@ nav {
 
     .navbar__brand {
         font-size: $l-size;
-        padding: 0 8px;
+        padding: 0px;
         
         h1 {
             display: inline;
             position: absolute;
             visibility: hidden;
             left: 5.8rem;
-            top: 2rem;
+            top: 1.6rem;
             margin: 0;
             font-size: 2.8rem;
             border-left: 1px solid;
@@ -94,7 +94,7 @@ nav {
         }
         
         a {
-            padding: 18px;
+            padding: 12px;
 
             &:hover {
                 color: color('shades', 'white');
@@ -103,6 +103,7 @@ nav {
 
         span {
             display: inline-block;
+            transition: transform .3s linear;
         }
     }
 }
