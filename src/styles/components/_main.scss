@@ -3,26 +3,29 @@ main {
 
     h1 {
         padding: 8px 0;
-        border-bottom: 2px solid color('main', 'grey');
+        border-bottom: 2px solid color('grey', 'darken-1');
+    }
+
+    h3 {
+        display: inline-block;
     }
 
     input {
         height: $l-size;
         border: none;
-        margin: 8px 8px 0 0;
+        height: $l-size;
         border-left: 2px solid color('main', 'base');
         border-bottom: 2px solid color('main', 'base');
         background: darken(color('main', 'secondary'), 4);
+        vertical-align: middle;
         text-indent: $m-size;
-        height: $xl-size;
         transition: background .3s cubic-bezier(.4,0,.2,1), text-indent .3s cubic-bezier(.4,0,.2,1), border-left .3s cubic-bezier(.4,0,.2,1);
-        
-        // @TODO find a svg (or fontAwesome) align-justify to put into pseudo element
         
         &:focus {
             outline: none;
             border-left: 1px solid color('main', 'secondary');
-            background: color('main', 'secondary');
+            background: darken(color('main', 'secondary'), 2);
+            color: darken(color('main', 'base'), 10);
             text-indent: 0;
         }
     }
@@ -32,6 +35,27 @@ main {
 
         li {
             display: inline-block;
+            margin: 0 8px 0 0;
+
+            label {
+                display: block;
+                margin-bottom: 4px;
+                color: darken(color('main', 'base'), 10);
+            }
+        }
+        
+        .sort-by-filter {
+            input[type="radio"] {
+                display: none;
+            }
+
+            label {
+                cursor: pointer;
+
+                &.active {
+                    color: inherit;
+                }
+            }
         }
     }
 }
