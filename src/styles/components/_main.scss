@@ -1,21 +1,28 @@
 main {
-    margin-left: 82px;
-
-    h1 {
-        padding: 8px 0;
-        border-bottom: 2px solid color('grey', 'darken-1');
+    ul {
+        width: 100%;
+        float: left;
+        padding: 0;
     }
 
-    h3 {
-        display: inline-block;
+    li {
+        margin: 0 8px 0 0;
+        float: left;
+    
+        label {
+            display: block;
+            margin-bottom: 4px;
+            color: color('main', 'base');
+            font-weight: 600;
+        }
     }
-
+    
     input {
         height: $l-size;
         border: none;
-        height: $l-size;
-        border-left: 2px solid color('main', 'base');
-        border-bottom: 2px solid color('main', 'base');
+        height: 4.6rem;
+        margin: 0 8px 0 0;
+        border-bottom: 2px solid color('blue-grey', 'lighten-2');
         background: darken(color('main', 'secondary'), 4);
         vertical-align: middle;
         text-indent: $m-size;
@@ -23,39 +30,25 @@ main {
         
         &:focus {
             outline: none;
-            border-left: 1px solid color('main', 'secondary');
             background: darken(color('main', 'secondary'), 2);
-            color: darken(color('main', 'base'), 10);
+            color: darken(color('blue-grey', 'lighten-2'), 10);
             text-indent: 0;
         }
     }
+}
 
-    ul {
-        padding: 0;
+.sort-by {
+    input {
+        display: none;
+    }
 
-        li {
-            display: inline-block;
-            margin: 0 8px 0 0;
+    label {
+        cursor: pointer;
 
-            label {
-                display: block;
-                margin-bottom: 4px;
-                color: darken(color('main', 'base'), 10);
-            }
-        }
-        
-        .sort-by-filter {
-            input[type="radio"] {
-                display: none;
-            }
-
-            label {
-                cursor: pointer;
-
-                &.active {
-                    color: inherit;
-                }
-            }
+        &.active {
+            color: inherit;
+            font-weight: normal;
+            text-indent: $s-size;
         }
     }
 }

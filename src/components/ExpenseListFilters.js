@@ -17,7 +17,7 @@ class ExpenseListFilters extends React.Component {
     render() {
         return (
             <div>
-                <h1>Expense List</h1>
+                <h1>Expenses List</h1>
                 <ul>
                     <li>
                         <label>description</label>
@@ -28,7 +28,20 @@ class ExpenseListFilters extends React.Component {
                         
                         />
                     </li>
-                    <li className="sort-by-filter">
+                    <li>
+                        <label>select a date</label>
+                        <DateRangePicker
+                            startDate={this.props.filters.startDate}
+                            endDate={this.props.filters.endDate}
+                            onDatesChange={this.onDatesChange}
+                            focusedInput={this.state.calendarFocused}
+                            onFocusChange={this.onFocusChange}
+                            showClearDates={true}
+                            numberOfMonths={1}
+                            isOutsideRange={() => false}
+                        />
+                    </li>
+                    <li className="sort-by">
                         <label>sort by</label>
                         <label className={this.props.filters.sortBy === 'amount' ? 'active' : ''}>
                             <input
@@ -50,18 +63,6 @@ class ExpenseListFilters extends React.Component {
                             />
                             date
                         </label>
-                    </li>
-                    <li>
-                        <DateRangePicker
-                            startDate={this.props.filters.startDate}
-                            endDate={this.props.filters.endDate}
-                            onDatesChange={this.onDatesChange}
-                            focusedInput={this.state.calendarFocused}
-                            onFocusChange={this.onFocusChange}
-                            showClearDates={true}
-                            numberOfMonths={1}
-                            isOutsideRange={() => false}
-                        />
                     </li>
                 </ul>
             </div>
