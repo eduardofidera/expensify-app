@@ -5,8 +5,8 @@
     top: 0;
     right: 0;
     height: 90px;
-    border-bottom: 1px solid #F4F3F0;
-    background: #83d3c9;
+    border-bottom: 1px solid color('main', 'background');
+    background: color('main', 'base');
 
     ul {
         padding: 0;
@@ -17,7 +17,7 @@
 
             a {
                 padding: $m-size;
-                color: #ffffff;
+                color: color('shades', 'white');
 
                 &:hover {
                     text-decoration: none;

@@ -66,12 +66,12 @@ nav {
         }
 
         .is-active {
-            background: color('main', 'secondary');
+            background: color('main', 'background');
             color: darken(color('main', 'base'), 10);
     
             &:hover {
                 color: darken(color('main', 'base'), 10);
-                background: color('main', 'secondary');
+                background: color('main', 'background');
             }
         }
     }

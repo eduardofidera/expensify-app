@@ -1,4 +1,8 @@
 main {
+    h1 {
+        color: color('main', 'foreground');
+    }
+
     ul {
         width: 100%;
         float: left;
@@ -12,8 +16,7 @@ main {
         label {
             display: block;
             margin-bottom: 4px;
-            color: color('main', 'base');
-            font-weight: 600;
+            color: inherit;
         }
     }
     
@@ -23,18 +26,23 @@ main {
         height: 4.6rem;
         margin: 0 8px 0 0;
         border-bottom: 2px solid color('blue-grey', 'lighten-2');
-        background: darken(color('main', 'secondary'), 4);
+        background: darken(color('main', 'background'), 4);
+        color: color('main', 'foreground');
         vertical-align: middle;
         text-indent: $m-size;
+        font-weight: 600;
         transition: background .3s cubic-bezier(.4,0,.2,1), text-indent .3s cubic-bezier(.4,0,.2,1), border-left .3s cubic-bezier(.4,0,.2,1);
         
         &:focus {
             outline: none;
-            background: darken(color('main', 'secondary'), 2);
-            color: darken(color('blue-grey', 'lighten-2'), 10);
+            background: darken(color('main', 'background'), 2);
             text-indent: 0;
         }
     }
+}
+
+.expense-dashboard {
+    display: flex;
 }
 
 .sort-by {
@@ -46,8 +54,8 @@ main {
         cursor: pointer;
 
         &.active {
-            color: inherit;
-            font-weight: normal;
+            color: color('main', 'foreground');
+            font-weight: 600;
             text-indent: $s-size;
         }
     }

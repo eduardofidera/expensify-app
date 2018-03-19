@@ -16,7 +16,7 @@ class ExpenseListFilters extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="expense-filter">
                 <h1>Expenses List</h1>
                 <ul>
                     <li>
